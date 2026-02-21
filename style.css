@@ -188,4 +188,23 @@ section.animate-scroll-in {
   .representative-image-container {
     margin-bottom: 1rem;
   }
+
+  /* Hero section mobile adjustments */
+  #hero-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero-image-container-inner {
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4/3;
+  }
+
+  #hero-image-front,
+  #hero-image-back {
+    background-size: contain !important;
+    background-position: center !important;
+  }
 }
