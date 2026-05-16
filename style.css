@@ -1,210 +1,95 @@
-/* Tailwind configuration is done via CDN, so we only need custom styles here */
+/* Custom Styles and Animations */
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-.hidden {
-  display: none;
-}
-
-.section {
-  scroll-margin-top: 100px;
-}
-
-.nav-link.active {
-  color: #f27f0d;
-  font-weight: bold;
-}
-
-.profile-image {
-  border-radius: 50%;
-  border: 4px solid #f27f0d;
-  object-fit: cover;
-}
-
-.representative-section {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
-.representative-image-container {
-  flex: 0 0 auto;
-}
-
-.representative-content {
-  flex: 1;
-}
-
 /* Mouse pointer effect - Custom cursor */
 body {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='30' viewBox='0 0 24 30'%3E%3Cpath d='M2 2L22 15L10 14L11 24z' fill='%23f27f0d' stroke='%23f27f0d' stroke-width='1'/%3E%3C/svg%3E"), auto;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='30' viewBox='0 0 24 30'%3E%3Cpath d='M2 2L22 15L10 14L11 24z' fill='%23FF6200' stroke='%23FF6200' stroke-width='1'/%3E%3C/svg%3E"), auto;
 }
-
-/* Hover effect for insurance plan images (not for profile images) */
-.insurance-plan-image:not(.profile-image) {
-  transition: all 0.3s ease;
-}
-
-.insurance-plan-image:not(.profile-image):hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  position: relative;
-}
-
-/* Hover effect for all cards in plans section */
-.plans-card {
-  transition: all 0.3s ease;
-}
-
-.plans-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
-}
-
-/* Enhanced animations for Hero Section */
 
 /* Fade-in animation */
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Float animation for floating elements */
+/* Float animation for decorative elements */
 @keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px) rotate(5deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(-20px);
   }
 }
 
-/* Pulse animation */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Flip animation for Hero images */
-.flip-container {
-  perspective: 1000px;
-}
-
-.flip-container .flipper {
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-container.flipped .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container .front, .flip-container .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.flip-container .back {
-  transform: rotateY(180deg);
-}
-
-/* Apply animations */
 .animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
 }
 
-.animation-delay-200 {
-  animation-delay: 0.2s;
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+.animation-delay-800 { animation-delay: 0.8s; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.animation-delay-400 {
-  animation-delay: 0.4s;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-.animation-delay-600 {
-  animation-delay: 0.6s;
+::-webkit-scrollbar-thumb {
+  background: #FF6200;
+  border-radius: 5px;
 }
 
-.animation-delay-1000 {
-  animation-delay: 1s;
+::-webkit-scrollbar-thumb:hover {
+  background: #e55a00;
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Enhanced hover effect for hero image */
-#hero-image:hover {
-  transform: scale(1.05) !important; /* Override inline styles */
-  box-shadow: 0 30px 50px -10px rgba(0, 0, 0, 0.3) !important;
-  animation: pulse 2s infinite;
+/* Dark mode glassmorphism */
+.dark .glass {
+  background: rgba(18, 18, 18, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Mouse hover effect for text */
-#hero-text:hover h1 {
-  text-shadow: 0 0 10px rgba(242, 127, 13, 0.5);
+/* Smooth selection */
+::selection {
+  background-color: #FF6200;
+  color: white;
 }
 
-/* Hover effect for CTA button */
-button:hover {
-  animation: pulse 1.5s infinite;
+/* Fix for flip-y-180 in Tailwind if not present */
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
 
-section.animate-scroll-in {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-@media (max-width: 768px) {
-  .representative-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .representative-image-container {
-    margin-bottom: 1rem;
-  }
-
-  /* Hero section mobile adjustments */
-  #hero-image-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  #hero-image-container-inner {
-    max-width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 4/3;
-  }
-
-  #hero-image-front,
-  #hero-image-back {
-    background-size: contain !important;
-    background-position: center !important;
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .animate-float {
+    animation: none; /* Disable for mobile to save battery/perf */
   }
 }

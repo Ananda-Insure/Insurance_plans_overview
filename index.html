@@ -4,13 +4,11 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>ตัวแทนประกัน FWD - โซลูชันการประกันที่ครอบคลุม</title>
+  <title>ตัวแทนประกัน FWD - อนัญดา สอาดพงษ์</title>
   <link href="asset/icon_web.jpg" rel="icon" type="image/jpeg">
   <link href="style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
     tailwind.config = {
@@ -18,17 +16,19 @@
       theme: {
         extend: {
           colors: {
-            primary: "#f27f0d",
-            "background-light": "#f8f7f5",
-            "background-dark": "#221910",
-            "text-light": "#1c140d",
-            "text-dark": "#f8f7f5",
-            "card-light": "#ffffff",
-            "card-dark": "#2a2016",
-            "border-light": "#f4ede7",
-            "border-dark": "#3c2d1e",
-            "muted-light": "#9c7349",
-            "muted-dark": "#a38b73",
+            primary: "#FF6200",
+            secondary: "#000000",
+            accent: "#FF6200",
+            "background-light": "#FFFFFF",
+            "background-dark": "#121212",
+            "text-light": "#1A1A1A",
+            "text-dark": "#F5F5F5",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1E1E1E",
+            "border-light": "#E5E5E5",
+            "border-dark": "#333333",
+            "muted-light": "#666666",
+            "muted-dark": "#AAAAAA",
           },
           fontFamily: {
             display: ["Manrope", "sans-serif"],
@@ -36,639 +36,673 @@
           borderRadius: {
             DEFAULT: "0.25rem",
             lg: "0.5rem",
-            xl: "0.75rem",
+            xl: "1rem",
+            "2xl": "1.5rem",
             full: "9999px",
           },
+          boxShadow: {
+            'premium': '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
+            'premium-hover': '0 20px 40px -15px rgba(255, 98, 0, 0.2)',
+          }
         },
       },
     };
   </script>
 </head>
 
-<body class="font-display bg-background-light dark:bg-background-dark">
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark selection:bg-primary selection:text-white">
   <div class="relative flex min-h-screen w-full flex-col">
-    <!-- TopNavBar -->
-    <header
-      class="sticky top-0 z-50 border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-      <div class="mx-auto flex max-w-6xl items-center justify-between whitespace-nowrap px-4 py-3">
-        <div class="flex items-center gap-4 text-text-light dark:text-text-dark">
-          <img src="asset/icon_web.jpg" alt="icon" class="h-8 w-8">
-          <a class="text-lg font-bold tracking-[-0.015em] text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary"
-            href="#home">ตัวแทนประกัน FWD</a>
+
+    <!-- ===== TOP NAV ===== -->
+    <header class="sticky top-0 z-50 border-b border-border-light/50 dark:border-border-dark/50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md transition-all duration-300">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3">
+          <img src="asset/FWD_logo.jpg" alt="FWD Logo" class="h-8 md:h-10 object-contain">
+          <div class="h-6 w-[1px] bg-border-light hidden sm:block"></div>
+          <a class="text-lg font-extrabold tracking-tight text-text-light dark:text-text-dark" href="#home">อนัญดา สอาดพงษ์</a>
         </div>
-        <div class="hidden items-center gap-8 md:flex">
-          <a class="nav-link text-sm font-medium text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary"
-            href="#home">หน้าหลัก</a>
-          <a class="nav-link text-sm font-medium text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary"
-            href="#about">เกี่ยวกับเรา</a>
-          <a class="nav-link text-sm font-medium text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary"
-            href="#plans">แผนประกัน</a>
-          <a class="nav-link text-sm font-medium text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary"
-            href="#contact">ติดต่อ</a>
-          <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition-colors"
-            href="https://www.facebook.com/share/1Fgcp7TBDV/" target="_blank">
-            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path clip-rule="evenodd"
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                fill-rule="evenodd"></path>
-            </svg>
+
+        <!-- Desktop Nav -->
+        <div class="hidden items-center gap-6 lg:flex">
+          <nav class="flex items-center gap-6">
+            <a class="nav-link text-sm font-semibold text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition-colors" href="#home">หน้าหลัก</a>
+            <a class="nav-link text-sm font-semibold text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition-colors" href="#about">เกี่ยวกับเรา</a>
+            <a class="nav-link text-sm font-semibold text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition-colors" href="#plans">แผนประกัน</a>
+            <a class="nav-link text-sm font-semibold text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition-colors" href="#contact">ติดต่อ</a>
+          </nav>
+          <div class="h-6 w-[1px] bg-border-light"></div>
+          <a href="https://anandainsure.agent-thailand.com/home/main/" target="_blank"
+            class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-primary/90 hover:scale-105 transition-all duration-300">
+            สนใจสมัครตัวแทน
           </a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-text-light dark:text-text-dark">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-border-light dark:border-border-dark bg-white dark:bg-background-dark px-4 py-6 space-y-4">
+        <a class="block text-base font-semibold" href="#home">หน้าหลัก</a>
+        <a class="block text-base font-semibold" href="#about">เกี่ยวกับเรา</a>
+        <a class="block text-base font-semibold" href="#plans">แผนประกัน</a>
+        <a class="block text-base font-semibold" href="#contact">ติดต่อ</a>
+        <a href="https://anandainsure.agent-thailand.com/home/main/" target="_blank"
+          class="block w-full text-center rounded-xl bg-primary px-6 py-3 text-white font-bold">
+          สนใจสมัครตัวแทน
+        </a>
       </div>
     </header>
+
     <main class="flex-grow">
-      <!-- Enhanced Hero Section with Initial Load and Mouse Hover Animations -->
-      <section id="home" class="w-full section relative overflow-hidden">
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-primary/10 to-[#f8f7f5]/20 dark:from-primary/5 dark:to-[#221910]/20">
-        </div>
-        <div class="relative z-10 mx-auto max-w-6xl p-4 @container sm:p-6 lg:p-8">
-          <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <!-- Hero Text Content -->
-            <div class="lg:w-1/2 flex flex-col items-start" id="hero-text">
-              <h1
-                class="text-4xl md:text-5xl lg:text-6xl font-bold text-text-light dark:text-text-dark mb-4 opacity-0 translate-y-10 animate-fade-in">
-                <span class="text-primary">ตัวแทนประกัน FWD</span><br>
-                <span>โซลูชันการประกันที่ครอบคลุม</span>
-              </h1>
-              <p
-                class="text-lg md:text-xl text-text-light dark:text-text-dark mb-8 max-w-lg opacity-0 translate-y-10 animate-fade-in animation-delay-200">
-                ดูแลคุณและคนที่คุณรักด้วยแผนประกันที่เหมาะสมที่สุด
-              </p>
-            </div>
 
-            <!-- Hero Image with Enhanced Hover Effects -->
-            <div class="lg:w-1/2 flex justify-center" id="hero-image-container">
-              <div id="hero-image-container-inner"
-                class="relative w-full max-w-md h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-3xl opacity-0 translate-y-10 animate-fade-in animation-delay-600"
-                style="transform-style: preserve-3d; perspective: 1000px;">
-                <!-- Back image (asset/fwd_agent_info2.jpg) -->
-                <div id="hero-image-back"
-                  class="absolute inset-0 rounded-2xl transition-all duration-700 ease-in-out transform"
-                  style="background-image: url('asset/fwd_agent_info2.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center; z-index: 10; transform: rotateY(180deg); opacity: 0;">
-                </div>
-                <!-- Front image (asset/fwd_agent_info1.jpg) -->
-                <div id="hero-image-front" class="absolute inset-0 rounded-2xl transition-all duration-700 ease-in-out"
-                  style="background-image: url('asset/fwd_agent_info1.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center; z-index: 20;">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+      <!-- ===== HERO SECTION ===== -->
+      <section id="home" class="relative overflow-hidden bg-white dark:bg-background-dark pt-20 pb-16">
+        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+          <!-- Hero Text (top) -->
+          <div class="text-center space-y-6 mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[0.8rem] font-bold animate-fade-in">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              FWD Insurance Agent
+            </div>
+            <h1 class="text-[2.7rem] md:text-[3.375rem] lg:text-[3.825rem] font-extrabold text-text-light dark:text-text-dark tracking-tight leading-[1.1] animate-fade-in animation-delay-200">
+              ดูแลคุณด้วย
+              <span class="text-primary italic">ความใส่ใจ</span>
+              และมืออาชีพ
+            </h1>
+            <p class="text-[0.9rem] md:text-[1.062rem] text-muted-light dark:text-muted-dark max-w-xl mx-auto animate-fade-in animation-delay-400">
+              นางสาวอนัญดา สอาดพงษ์ พร้อมให้คำปรึกษาและวางแผนประกันที่ตอบโจทย์ชีวิตคุณที่สุด
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in animation-delay-600">
+              <a href="#plans" class="w-full sm:w-auto px-7 py-3.5 bg-primary text-white font-extrabold rounded-full shadow-premium hover:shadow-premium-hover transition-all duration-300 transform hover:-translate-y-1 text-[0.875rem]">
+                ดูแผนประกันทั้งหมด
+              </a>
+              <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 bg-white dark:bg-background-dark text-text-light dark:text-text-dark font-extrabold rounded-full border-2 border-border-light dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 text-[0.875rem]">
+                ปรึกษาฟรี
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Images: Stacked Cards (full width, landscape) -->
+          <div class="animate-fade-in animation-delay-800 flex justify-center">
+            <!-- wrapper: width 100%, padding-bottom sets height via aspect ratio of images (~4:3 landscape) -->
+            <div id="hero-stack" class="relative w-full" style="padding-bottom: calc(75% + 28px); max-width: 900px;">
+
+              <!-- Back card (img2) - offset below-right, faded -->
+              <div id="hero-card-back"
+                class="absolute rounded-2xl overflow-hidden shadow-xl cursor-pointer select-none"
+                style="
+                  width: calc(100% - 28px);
+                  height: calc(100% - 28px);
+                  top: 28px;
+                  left: 28px;
+                  opacity: 0.4;
+                  filter: blur(1.5px);
+                  transition: top 0.55s cubic-bezier(0.4,0,0.2,1),
+                              left 0.55s cubic-bezier(0.4,0,0.2,1),
+                              opacity 0.55s cubic-bezier(0.4,0,0.2,1),
+                              filter 0.55s cubic-bezier(0.4,0,0.2,1),
+                              z-index 0s 0.27s;
+                  z-index: 1;
+                ">
+                <img src="asset/fwd_agent_info2.jpg" alt="FWD Agent Info 2" class="w-full h-full object-contain">
               </div>
-            </div>
-          </div>
 
-          <!-- Floating Elements for Animation -->
-          <div class="absolute top-1/4 left-10 w-8 h-8 rounded-full bg-primary/20 animate-float animation-delay-1000">
-          </div>
-          <div class="absolute top-1/3 right-20 w-6 h-6 rounded-full bg-primary/30 animate-float animation-delay-2000">
-          </div>
-          <div
-            class="absolute bottom-1/4 left-1/4 w-5 h-5 rounded-full bg-primary/25 animate-float animation-delay-500">
-          </div>
-        </div>
-      </section>
-
-      <!-- Representative Section -->
-      <section
-        class="section py-16 bg-background-light dark:bg-background-dark border-y border-border-light dark:border-border-dark">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div class="representative-section">
-            <div class="representative-image-container">
-              <img src="asset/profile.jpg" alt="ตัวแทนประกัน" class="h-64 w-64 profile-image rounded-xl" />
-            </div>
-            <div class="representative-content">
-              <h2 class="text-3xl font-bold text-text-light dark:text-text-dark mb-4">พบกับตัวแทนประกัน</h2>
-              <p class="text-lg text-text-light dark:text-text-dark mb-4">นางสาวอนัญดา สอาดพงษ์</p>
-              <p class="text-base font-normal leading-relaxed text-text-light dark:text-text-dark">ด้วยประสบการณ์มากกว่า
-                3 ปี มุ่งมั่นที่จะนำเสนอแผนประกัน FWD ที่ดีที่สุดที่เหมาะสมกับความต้องการเฉพาะของคุณ
-                โดยมีพันธกิจคือการสร้างความสัมพันธ์ที่ยั่งยืนบนพื้นฐานของความไว้วางใจ ความซื่อสัตย์
-                และบริการที่ยอดเยี่ยม เพื่อช่วยคุ้มครองชีวิต สุขภาพ และทรัพสินของคุณ</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section">
-        <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-3 lg:px-8">
-          <!-- About Section (Left/Top) -->
-          <div class="flex flex-col gap-8 lg:col-span-2">
-            <!-- ProfileHeader -->
-            <div
-              class="rounded-xl border border-border-light bg-card-light p-6 dark:border-border-dark dark:bg-card-dark">
-              <div class="flex flex-col items-start gap-6 sm:flex-row">
-                <div class="aspect-square h-32 w-32 flex-shrink-0 rounded-full bg-cover bg-center bg-no-repeat"
-                  data-alt="ภาพถ่ายมืออาชีพของคุณอนัญดา สอาดพงษ์" style='background-image: url("asset/profile.jpg");'></div>
-                <div class="flex flex-col justify-center">
-                  <p
-                    class="text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">
-                    นางสาวอนัญดา สอาดพงษ์</p>
-                  <p class="text-base font-normal leading-normal text-muted-light dark:text-muted-dark">
-                    นักวางแผนการเงินได้รับการรับรอง</p>
-                  <p class="text-base font-normal leading-normal text-muted-light dark:text-muted-dark">
-                    ประสบการณ์มากกว่า 3 ปีในอุตสาหกรรมประกัน</p>
-                </div>
+              <!-- Front card (img1) -->
+              <div id="hero-card-front"
+                class="absolute rounded-2xl overflow-hidden shadow-2xl cursor-pointer select-none"
+                style="
+                  width: calc(100% - 28px);
+                  height: calc(100% - 28px);
+                  top: 0;
+                  left: 0;
+                  opacity: 1;
+                  filter: blur(0px);
+                  transition: top 0.55s cubic-bezier(0.4,0,0.2,1),
+                              left 0.55s cubic-bezier(0.4,0,0.2,1),
+                              opacity 0.55s cubic-bezier(0.4,0,0.2,1),
+                              filter 0.55s cubic-bezier(0.4,0,0.2,1),
+                              z-index 0s 0.27s;
+                  z-index: 2;
+                ">
+                <img src="asset/fwd_agent_info1.jpg" alt="FWD Agent Info 1" class="w-full h-full object-contain">
               </div>
-            </div>
-            <!-- Qualifications Section -->
-            <div
-              class="rounded-xl border border-border-light bg-card-light p-6 dark:border-border-dark dark:bg-card-dark">
-              <h3 class="mb-4 text-xl font-bold text-text-light dark:text-text-dark">คุณวุฒิ</h3>
-              <ul class="space-y-3">
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"> check_circle </span>
-                  <span class="text-base text-text-light dark:text-text-dark">เลขที่ใบอนุญาตตัวแทน: 6701000554</span>
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"> check_circle </span>
-                  <span
-                    class="text-base text-text-light dark:text-text-dark">สมาชิกสมาคมตัวแทนประกันและที่ปรึกษาการเงินแห่งชาติ</span>
-                </li>
-              </ul>
+
             </div>
           </div>
-          <!-- Services Section (Right/Bottom) -->
-          <div class="flex flex-col gap-8 lg:col-span-1">
-            <div
-              class="sticky top-24 rounded-xl border border-border-light bg-card-light p-6 dark:border-border-dark dark:bg-card-dark">
-              <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">
-                บริการของเรา</h2>
-              <ul class="mt-4 space-y-3">
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"> check_circle </span>
-                  <span class="text-base text-text-light dark:text-text-dark">วางแผนประกันชีวิต</span>
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"> check_circle </span>
-                  <span class="text-base text-text-light dark:text-text-dark">ความคุ้มครองสุขภาพและการแพทย์</span>
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"> check_circle </span>
-                  <span class="text-base text-text-light dark:text-text-dark">การคุ้มครองโรคร้ายแรง</span>
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"> check_circle </span>
-                  <span class="text-base text-text-light dark:text-text-dark">แผนเกษียณและออมทรัพย์</span>
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"> check_circle </span>
-                  <span class="text-base text-text-light dark:text-text-dark">โซลูชันวางแผนมรดก</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+
         </div>
       </section>
 
-      <!-- Insurance Plans Section -->
-      <section id="plans" class="section py-16">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-center">
-            ค้นหาแผนที่เหมาะสมกับคุณ</h2>
-          <!-- Chips -->
-          <div class="flex gap-3 p-4 flex-wrap justify-center">
-            <button
-              class="filter-chip flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary pl-5 pr-5 border-none"
-              data-filter="all">
-              <p class="text-white text-sm font-medium leading-normal">ทั้งหมด</p>
-            </button>
-            <button
-              class="filter-chip flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary/20 dark:bg-primary/30 pl-5 pr-5 hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors border-none"
-              data-filter="life-health">
-              <p class="text-primary text-sm font-medium leading-normal">ชีวิตและสุขภาพ</p>
-            </button>
-            <button
-              class="filter-chip flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary/20 dark:bg-primary/30 pl-5 pr-5 hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors border-none"
-              data-filter="savings">
-              <p class="text-primary text-sm font-medium leading-normal">ออมทรัพย์</p>
-            </button>
-            <button
-              class="filter-chip flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary/20 dark:bg-primary/30 pl-5 pr-5 hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors border-none"
-              data-filter="critical-illness">
-              <p class="text-primary text-sm font-medium leading-normal">โรคร้ายแรง</p>
-            </button>
-          </div>
-          <!-- ImageGrid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-            <div
-              class="plans-card flex flex-col gap-3 pb-3 border border-primary/20 dark:border-primary/30 rounded-xl p-4 hover:shadow-lg hover:border-primary/40 transition-all"
-              data-category="life-health">
-              <div class="insurance-plan-image w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                data-alt="แผน FWD Term Life Plus" style='background-image: url("asset/fwdplan1.jpg");'></div>
-              <div>
-                <p class="text-gray-800 dark:text-gray-200 text-base font-bold leading-normal">FWD Term Life Plus</p>
-                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
-                  ความคุ้มครองชีวิตโดยสมบูรณ์สำหรับคนที่คุณรัก</p>
-                <a class="text-primary dark:text-primary text-sm font-bold leading-normal mt-3 inline-flex items-center gap-1 group"
-                  href="#" onclick="openLightbox('asset/fwdplan1.jpg'); return false;">
-                  ดูรายละเอียด
-                  <span
-                    class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
+      <!-- ===== ABOUT SECTION ===== -->
+      <section id="about" class="py-24 bg-gray-50 dark:bg-[#0D0D0D]">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <!-- Image -->
+            <div class="relative order-2 lg:order-1">
+              <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                <img src="asset/profile.jpg" alt="อนัญดา สอาดพงษ์" class="w-full h-full object-cover">
               </div>
+              <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full -z-10 blur-2xl"></div>
             </div>
-            <div
-              class="plans-card flex flex-col gap-3 pb-3 border border-primary/20 dark:border-primary/30 rounded-xl p-4 hover:shadow-lg hover:border-primary/40 transition-all"
-              data-category="critical-illness">
-              <div class="insurance-plan-image w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                data-alt="แผน FWD Cancer Knockout" style='background-image: url("asset/fwdplan2.jpg");'></div>
-              <div>
-                <p class="text-gray-800 dark:text-gray-200 text-base font-bold leading-normal">FWD Cancer Knockout</p>
-                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
-                  การสนับสนุนทางการเงินเพื่อต่อสู้กับโรคมะเร็ง</p>
-                <a class="text-primary dark:text-primary text-sm font-bold leading-normal mt-3 inline-flex items-center gap-1 group"
-                  href="#" onclick="openLightbox('asset/fwdplan2.jpg'); return false;">
-                  ดูรายละเอียด
-                  <span
-                    class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
+
+            <!-- Info -->
+            <div class="order-1 lg:order-2 space-y-6">
+              <h2 class="text-sm font-bold text-primary uppercase tracking-widest">About Me</h2>
+              <h3 class="text-4xl md:text-5xl font-extrabold text-text-light dark:text-text-dark">นางสาวอนัญดา สอาดพงษ์</h3>
+              <p class="text-xl font-medium text-primary">นักวางแผนการเงิน (Wealth Advisor) · Health Protection Specialist</p>
+              <div class="space-y-4 text-lg text-muted-light dark:text-muted-dark leading-relaxed">
+                <p>ด้วยความมุ่งมั่นที่จะส่งต่อความคุ้มครองที่ครอบคลุมและดีที่สุดให้กับทุกคน ดิฉันพร้อมให้คำปรึกษาในการวางแผนประกันชีวิต สุขภาพ และการออม</p>
+                <p>พันธกิจของดิฉันคือการสร้างความสัมพันธ์ที่ยั่งยืนบนพื้นฐานของความไว้วางใจ ความซื่อสัตย์ และบริการที่ยอดเยี่ยม เพื่อช่วยคุ้มครองชีวิต สุขภาพ และทรัพย์สินของคุณ</p>
               </div>
-            </div>
-            <div
-              class="plans-card flex flex-col gap-3 pb-3 border border-primary/20 dark:border-primary/30 rounded-xl p-4 hover:shadow-lg hover:border-primary/40 transition-all"
-              data-category="life-health">
-              <div class="insurance-plan-image w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                data-alt="แผน FWD Invest First" style='background-image: url("asset/fwdplan3.jpg");'></div>
-              <div>
-                <p class="text-gray-800 dark:text-gray-200 text-base font-bold leading-normal">FWD Invest First</p>
-                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
-                  เติบโตให้ความมั่งคั่งของคุณในขณะที่ยังคงได้รับการปกป้อง</p>
-                <a class="text-primary dark:text-primary text-sm font-bold leading-normal mt-3 inline-flex items-center gap-1 group"
-                  href="#" onclick="openLightbox('asset/fwdplan3.jpg'); return false;">
-                  ดูรายละเอียด
-                  <span
-                    class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
+
+              <!-- Qualifications -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="flex items-start gap-3">
+                  <div class="mt-1 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-sm">check</span>
+                  </div>
+                  <div>
+                    <p class="font-bold">ใบอนุญาตตัวแทน</p>
+                    <p class="text-sm text-muted-light">เลขที่: 6701000554</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="mt-1 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-sm">check</span>
+                  </div>
+                  <div>
+                    <p class="font-bold">ที่ปรึกษาการเงิน</p>
+                    <p class="text-sm text-muted-light">IC license: 139068</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="mt-1 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-sm">check</span>
+                  </div>
+                  <div>
+                    <p class="font-bold">เลขตัวแทน</p>
+                    <p class="text-sm text-muted-light">168519</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="mt-1 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-sm">check</span>
+                  </div>
+                  <div>
+                    <p class="font-bold">สมาชิกสมาคมตัวแทน</p>
+                    <p class="text-sm text-muted-light">ประกันและที่ปรึกษาการเงินแห่งชาติ</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div
-              class="plans-card flex flex-col gap-3 pb-3 border border-primary/20 dark:border-primary/30 rounded-xl p-4 hover:shadow-lg hover:border-primary/40 transition-all"
-              data-category="critical-illness">
-              <div class="insurance-plan-image w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                data-alt="แผน FWD Critical Illness Plus" style='background-image: url("asset/fwdplan4.jpg");'></div>
-              <div>
-                <p class="text-gray-800 dark:text-gray-200 text-base font-bold leading-normal">FWD Critical Illness Plus
-                </p>
-                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
-                  ความคุ้มครองสำหรับโรคที่ร้ายแรงหลากหลายโรค</p>
-                <a class="text-primary dark:text-primary text-sm font-bold leading-normal mt-3 inline-flex items-center gap-1 group"
-                  href="#" onclick="openLightbox('asset/fwdplan4.jpg'); return false;">
-                  ดูรายละเอียด
-                  <span
-                    class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-            <div
-              class="plans-card flex flex-col gap-3 pb-3 border border-primary/20 dark:border-primary/30 rounded-xl p-4 hover:shadow-lg hover:border-primary/40 transition-all"
-              data-category="savings">
-              <div class="insurance-plan-image w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                data-alt="แผน FWD Savings Pro" style='background-image: url("asset/fwdplan5.jpg");'></div>
-              <div>
-                <p class="text-gray-800 dark:text-gray-200 text-base font-bold leading-normal">FWD Savings Pro</p>
-                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
-                  วิธีที่มีวินัยในการออมสำหรับเป้าหมายในอนาคตของคุณ</p>
-                <a class="text-primary dark:text-primary text-sm font-bold leading-normal mt-3 inline-flex items-center gap-1 group"
-                  href="#" onclick="openLightbox('asset/fwdplan5.jpg'); return false;">
-                  ดูรายละเอียด
-                  <span
-                    class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-            <div
-              class="plans-card flex flex-col gap-3 pb-3 border border-primary/20 dark:border-primary/30 rounded-xl p-4 hover:shadow-lg hover:border-primary/40 transition-all"
-              data-category="life-health">
-              <div class="insurance-plan-image w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                data-alt="แผน FWD HealthFirst" style='background-image: url("asset/fwdplan6.jpg");'></div>
-              <div>
-                <p class="text-gray-800 dark:text-gray-200 text-base font-bold leading-normal">FWD HealthFirst</p>
-                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
-                  ความคุ้มครองทางการแพทย์และโรงพยาบาลแบบครบวงจร</p>
-                <a class="text-primary dark:text-primary text-sm font-bold leading-normal mt-3 inline-flex items-center gap-1 group"
-                  href="#" onclick="openLightbox('asset/fwdplan6.jpg'); return false;">
-                  ดูรายละเอียด
-                  <span
-                    class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
+
+              <!-- Services -->
+              <div class="pt-4">
+                <h4 class="text-lg font-bold mb-4">บริการของเรา</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div class="flex items-center gap-2 text-muted-light dark:text-muted-dark">
+                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                    <span class="text-sm">วางแผนประกันชีวิต</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-muted-light dark:text-muted-dark">
+                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                    <span class="text-sm">ความคุ้มครองสุขภาพและการแพทย์</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-muted-light dark:text-muted-dark">
+                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                    <span class="text-sm">การคุ้มครองโรคร้ายแรง</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-muted-light dark:text-muted-dark">
+                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                    <span class="text-sm">แผนเกษียณและออมทรัพย์</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-muted-light dark:text-muted-dark">
+                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                    <span class="text-sm">โซลูชันวางแผนมรดก</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <div class="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 lg:px-8">
-          <!-- Contact Information -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-            <div
-              class="rounded-xl border border-border-light bg-card-light p-6 dark:border-border-dark dark:bg-card-dark">
-              <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">
-                ติดต่อเรา</h2>
-              <p class="mt-2 text-base text-muted-light dark:text-muted-dark">มีคำถามหรือต้องการคำปรึกษา?
-                ติดต่อเราได้เลย!</p>
-              <!-- Agent Info -->
-              <div class="mt-6 space-y-3">
-                <p class="text-base font-bold text-text-light dark:text-text-dark">อนัญดา สอาดพงษ์</p>
-                <p class="text-sm text-muted-light dark:text-muted-dark">Health Protection Specialist</p>
-                <div class="space-y-1 text-sm text-muted-light dark:text-muted-dark">
-                  <p>ใบอนุญาติเลขที่: 6701000554</p>
-                  <p>เลขตัวแทน: 168519</p>
-                  <p>IC license: 139068</p>
-                </div>
+      <!-- ===== INSURANCE PLANS SECTION ===== -->
+      <section id="plans" class="py-24 bg-white dark:bg-background-dark">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">Our Plans</h2>
+            <h3 class="text-4xl font-extrabold text-text-light dark:text-text-dark mb-6">
+              เลือกแผนประกันที่ <span class="text-primary">ใช่</span> สำหรับคุณ
+            </h3>
+            <p class="text-lg text-muted-light dark:text-muted-dark">
+              เรามีแผนประกันที่หลากหลาย ครอบคลุมทุกความต้องการ ไม่ว่าจะเป็นประกันชีวิต สุขภาพ หรือการออม
+            </p>
+          </div>
+
+          <!-- Filter Chips -->
+          <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="filter-chip px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm shadow-lg transition-all duration-300" data-filter="all">ทั้งหมด</button>
+            <button class="filter-chip px-6 py-2.5 rounded-full bg-white dark:bg-card-dark text-text-light dark:text-text-dark font-bold text-sm border border-border-light dark:border-border-dark hover:border-primary/50 transition-all duration-300" data-filter="life-health">ชีวิตและสุขภาพ</button>
+            <button class="filter-chip px-6 py-2.5 rounded-full bg-white dark:bg-card-dark text-text-light dark:text-text-dark font-bold text-sm border border-border-light dark:border-border-dark hover:border-primary/50 transition-all duration-300" data-filter="savings">ออมทรัพย์</button>
+            <button class="filter-chip px-6 py-2.5 rounded-full bg-white dark:bg-card-dark text-text-light dark:text-text-dark font-bold text-sm border border-border-light dark:border-border-dark hover:border-primary/50 transition-all duration-300" data-filter="critical-illness">โรคร้ายแรง</button>
+          </div>
+
+          <!-- Plans Grid (6 plans from index2) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Plan 1: Term Life Plus -->
+            <div class="plans-card group bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" data-category="life-health">
+              <div class="relative aspect-video overflow-hidden">
+                <img src="asset/fwdplan1.jpg" alt="FWD Term Life Plus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <!-- Direct Contact Info -->
-              <div class="space-y-4 mt-6">
-                <a class="flex items-center gap-3 text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary"
-                  href="tel:062-2547887">
-                  <span class="material-symbols-outlined text-muted-light dark:text-muted-dark"> call </span>
-                  <span>062-2547887</span>
-                </a>
-                <a class="flex items-center gap-3 text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary"
-                  href="mailto:ANANDA.168519@FWD.COM">
-                  <span class="material-symbols-outlined text-muted-light dark:text-muted-dark"> mail </span>
-                  <span>ANANDA.168519@FWD.COM</span>
-                </a>
-                <div class="flex items-center gap-3 text-text-light dark:text-text-dark mt-4">
-                  <a href="https://www.facebook.com/share/1Fgcp7TBDV/" target="_blank"
-                    class="hover:text-primary dark:hover:text-primary flex items-center gap-2">
-                    <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path clip-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                    <span>Facebook</span>
+              <div class="p-8">
+                <h4 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">FWD Term Life Plus</h4>
+                <p class="text-muted-light dark:text-muted-dark text-sm mb-6 leading-relaxed">ความคุ้มครองชีวิตโดยสมบูรณ์สำหรับคนที่คุณรัก มอบความมั่นคงให้ครอบครัว</p>
+                <button onclick="openLightbox('asset/fwdplan1.jpg')" class="inline-flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                  ดูรายละเอียด
+                  <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Plan 2: Cancer Knockout -->
+            <div class="plans-card group bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" data-category="critical-illness">
+              <div class="relative aspect-video overflow-hidden">
+                <img src="asset/fwdplan2.jpg" alt="FWD Cancer Knockout" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-8">
+                <h4 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">FWD Cancer Knockout</h4>
+                <p class="text-muted-light dark:text-muted-dark text-sm mb-6 leading-relaxed">เตรียมพร้อมรับมือกับโรคร้ายแรง ด้วยวงเงินคุ้มครองที่ครอบคลุมทุกระยะ</p>
+                <button onclick="openLightbox('asset/fwdplan2.jpg')" class="inline-flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                  ดูรายละเอียด
+                  <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Plan 3: Invest First -->
+            <div class="plans-card group bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" data-category="life-health">
+              <div class="relative aspect-video overflow-hidden">
+                <img src="asset/fwdplan3.jpg" alt="FWD Invest First" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-8">
+                <h4 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">FWD Invest First</h4>
+                <p class="text-muted-light dark:text-muted-dark text-sm mb-6 leading-relaxed">เติบโตให้ความมั่งคั่งของคุณในขณะที่ยังคงได้รับการปกป้อง</p>
+                <button onclick="openLightbox('asset/fwdplan3.jpg')" class="inline-flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                  ดูรายละเอียด
+                  <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Plan 4: Critical Illness Plus -->
+            <div class="plans-card group bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" data-category="critical-illness">
+              <div class="relative aspect-video overflow-hidden">
+                <img src="asset/fwdplan4.jpg" alt="FWD Critical Illness Plus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-8">
+                <h4 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">FWD Critical Illness Plus</h4>
+                <p class="text-muted-light dark:text-muted-dark text-sm mb-6 leading-relaxed">ความคุ้มครองสำหรับโรคที่ร้ายแรงหลากหลายโรค ครอบคลุมทุกสถานการณ์</p>
+                <button onclick="openLightbox('asset/fwdplan4.jpg')" class="inline-flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                  ดูรายละเอียด
+                  <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Plan 5: Savings Pro -->
+            <div class="plans-card group bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" data-category="savings">
+              <div class="relative aspect-video overflow-hidden">
+                <img src="asset/fwdplan5.jpg" alt="FWD Savings Pro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-8">
+                <h4 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">FWD Savings Pro</h4>
+                <p class="text-muted-light dark:text-muted-dark text-sm mb-6 leading-relaxed">วิธีที่มีวินัยในการออมสำหรับเป้าหมายในอนาคตของคุณ</p>
+                <button onclick="openLightbox('asset/fwdplan5.jpg')" class="inline-flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                  ดูรายละเอียด
+                  <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Plan 6: HealthFirst -->
+            <div class="plans-card group bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" data-category="life-health">
+              <div class="relative aspect-video overflow-hidden">
+                <img src="asset/fwdplan6.jpg" alt="FWD HealthFirst" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-8">
+                <h4 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">FWD HealthFirst</h4>
+                <p class="text-muted-light dark:text-muted-dark text-sm mb-6 leading-relaxed">ความคุ้มครองทางการแพทย์และโรงพยาบาลแบบครบวงจร</p>
+                <button onclick="openLightbox('asset/fwdplan6.jpg')" class="inline-flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                  ดูรายละเอียด
+                  <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section id="contact" class="py-24 bg-gray-50 dark:bg-[#0D0D0D]">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">Contact</h2>
+            <h3 class="text-4xl font-extrabold text-text-light dark:text-text-dark">ติดต่อเราได้เลย</h3>
+            <p class="mt-4 text-lg text-muted-light dark:text-muted-dark">มีคำถามหรือต้องการคำปรึกษา? ดิฉันพร้อมช่วยเหลือคุณ</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left: Contact Info + Social -->
+            <div class="space-y-6">
+              <!-- Contact Card -->
+              <div class="p-8 bg-white dark:bg-card-dark rounded-3xl shadow-premium border border-border-light dark:border-border-dark">
+                <h4 class="text-xl font-extrabold mb-1">อนัญดา สอาดพงษ์</h4>
+                <p class="text-primary font-semibold mb-4">Health Protection Specialist</p>
+                <div class="space-y-1 text-sm text-muted-light dark:text-muted-dark mb-6">
+                  <p>ใบอนุญาตเลขที่: 6701000554 &nbsp;|&nbsp; เลขตัวแทน: 168519 &nbsp;|&nbsp; IC license: 139068</p>
+                </div>
+                <div class="space-y-4">
+                  <a href="tel:062-2547887" class="flex items-center gap-3 text-text-light dark:text-text-dark hover:text-primary transition-colors">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-primary text-lg">call</span>
+                    </div>
+                    <span class="font-semibold">062-2547887</span>
+                  </a>
+                  <a href="mailto:ANANDA.168519@FWD.COM" class="flex items-center gap-3 text-text-light dark:text-text-dark hover:text-primary transition-colors">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                    </div>
+                    <span class="font-semibold">ANANDA.168519@FWD.COM</span>
+                  </a>
+                  <a href="https://line.me/R/ti/p/@479jzqhy" target="_blank" class="flex items-center gap-3 text-text-light dark:text-text-dark hover:text-primary transition-colors">
+                    <div class="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <img src="asset/line_logo.jpg" alt="LINE" class="w-5 h-5 rounded-full">
+                    </div>
+                    <span class="font-semibold">LINE: @479jzqhy</span>
+                  </a>
+                  <a href="https://www.facebook.com/share/1Fgcp7TBDV/" target="_blank" class="flex items-center gap-3 text-text-light dark:text-text-dark hover:text-primary transition-colors">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </div>
+                    <span class="font-semibold">Facebook: อนัญดา สอาดพงษ์</span>
                   </a>
                 </div>
-                <div class="flex items-center gap-3 text-text-light dark:text-text-dark mt-2">
-                  <a href="https://line.me/R/ti/p/@479jzqhy" target="_blank"
-                    class="hover:text-primary dark:hover:text-primary flex items-center gap-2">
-                    <img src="asset/line_logo.jpg" alt="LINE" class="h-6 w-6">
-                    <span>LINE</span>
-                  </a>
+              </div>
+
+              <!-- สมัครตัวแทน Card -->
+              <div class="p-8 bg-secondary rounded-3xl text-white shadow-xl flex flex-col items-center text-center space-y-4">
+                <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-4xl text-primary">groups</span>
                 </div>
+                <div>
+                  <h4 class="text-2xl font-bold mb-2">สนใจสมัครตัวแทน FWD?</h4>
+                  <p class="text-white/80">ร่วมทีมกับเรา สร้างรายได้และอิสระในการทำงานได้ที่นี่</p>
+                </div>
+                <a href="https://anandainsure.agent-thailand.com/home/main/" target="_blank"
+                  class="w-full py-4 bg-primary text-white font-extrabold rounded-xl hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                  สมัครตัวแทนออนไลน์
+                </a>
               </div>
             </div>
 
-            <!-- การคำนวนเบี้ยประกันด้วยตนเอง -->
-            <div
-              class="rounded-xl border border-border-light bg-card-light p-6 dark:border-border-dark dark:bg-card-dark flex flex-col items-center justify-center text-center">
-              <div
-                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 dark:bg-primary/20 mb-5">
-                <span class="material-symbols-outlined text-primary text-5xl">calculate</span>
+            <!-- Right: Action Cards -->
+            <div class="space-y-6">
+              <!-- คำนวณเบี้ย -->
+              <div class="p-8 bg-primary rounded-3xl text-white shadow-xl flex flex-col items-center text-center space-y-6">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-4xl">calculate</span>
+                </div>
+                <div>
+                  <h4 class="text-2xl font-bold mb-2">คำนวณเบี้ยประกันด้วยตนเอง</h4>
+                  <p class="text-white/80">เปรียบเทียบแผนและเช็คเบี้ยได้ทันทีผ่านระบบออนไลน์ของ FWD</p>
+                </div>
+                <a href="https://www.fwd.co.th/th/health-insurance/compare-health-plans-online/" target="_blank"
+                  class="w-full py-4 bg-white text-primary font-extrabold rounded-xl hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                  คำนวณเบี้ยประกัน
+                </a>
               </div>
-              <h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-3">การคำนวนเบี้ยประกันด้วยตนเอง</h3>
-              <p class="text-base text-muted-light dark:text-muted-dark mb-6">
-                คุณสามารถเปรียบเทียบแผนประกันสุขภาพและคำนวนเบี้ยประกันเบื้องต้นได้ด้วยตนเอง ผ่านเครื่องมือออนไลน์ของ
-                FWD ประกันภัย เพียงเลือกแผนที่เหมาะสมกับความต้องการของคุณ</p>
-              <a href="https://www.fwd.co.th/th/health-insurance/compare-health-plans-online/" target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white font-bold text-sm shadow-md hover:bg-primary/90 hover:shadow-lg transition-all duration-300 group">
-                <span class="material-symbols-outlined text-base">open_in_new</span>
-                คำนวนเบี้ยประกัน / เปรียบเทียบแผนประกันสุขภาพ
-                <span
-                  class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-              </a>
-            </div>
 
-            <!-- สมัครประกัน -->
-            <div
-              class="rounded-xl border border-border-light bg-card-light p-6 dark:border-border-dark dark:bg-card-dark flex flex-col items-center justify-center text-center">
-              <div
-                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 dark:bg-primary/20 mb-5">
-                <span class="material-symbols-outlined text-primary text-5xl">assignment</span>
+              <!-- ประกันออนไลน์ -->
+              <div class="p-8 bg-white dark:bg-card-dark rounded-3xl shadow-premium border border-border-light dark:border-border-dark flex flex-col items-center text-center space-y-6">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-primary text-4xl">shopping_cart</span>
+                </div>
+                <div>
+                  <h4 class="text-2xl font-bold mb-2">ประกันออนไลน์</h4>
+                  <p class="text-muted-light dark:text-muted-dark">ซื้อตอนนี้ พร้อมส่วนลด สมัครง่ายๆ ผ่านลิงค์ได้ด้วยตัวเอง<br>
+                    <strong class="text-text-light dark:text-text-dark">ใส่รหัสผู้แนะนำ 168519</strong>
+                  </p>
+                </div>
+                <a href="https://www.fwd.co.th/th/partner/fwd/online-products/" target="_blank"
+                  class="w-full py-4 bg-primary text-white font-extrabold rounded-xl hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                  ซื้อประกันออนไลน์
+                </a>
               </div>
-              <h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-3">สมัครประกัน</h3>
-              <p class="text-base text-muted-light dark:text-muted-dark mb-6">
-                หากมีแผนที่สนใจแล้ว สามารถกรอกฟอร์มเพื่อสมัครได้เลยนะคะ 1 ฟอร์ม ต่อ 1 คนเท่านั้นนะคะ</p>
-              <a href="https://forms.gle/TrmpJVDQfnvpdCpv9" target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white font-bold text-sm shadow-md hover:bg-primary/90 hover:shadow-lg transition-all duration-300 group">
-                <span class="material-symbols-outlined text-base">open_in_new</span>
-                กรอกฟอร์มสมัครประกัน
-                <span
-                  class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-              </a>
-            </div>
 
-            <!-- ประกันออนไลน์ -->
-            <div
-              class="rounded-xl border border-border-light bg-card-light p-6 dark:border-border-dark dark:bg-card-dark flex flex-col items-center justify-center text-center">
-              <div
-                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 dark:bg-primary/20 mb-5">
-                <span class="material-symbols-outlined text-primary text-5xl">shopping_cart</span>
+              <!-- สมัครประกัน Form -->
+              <div class="p-8 bg-white dark:bg-card-dark rounded-3xl shadow-premium border border-border-light dark:border-border-dark flex flex-col items-center text-center space-y-6">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                  <span class="material-symbols-outlined text-primary text-4xl">assignment</span>
+                </div>
+                <div>
+                  <h4 class="text-2xl font-bold mb-2">สมัครประกัน</h4>
+                  <p class="text-muted-light dark:text-muted-dark">หากมีแผนที่สนใจแล้ว สามารถกรอกฟอร์มเพื่อสมัครได้เลย<br>
+                    <strong class="text-text-light dark:text-text-dark">1 ฟอร์ม ต่อ 1 คน</strong>
+                  </p>
+                </div>
+                <a href="https://forms.gle/TrmpJVDQfnvpdCpv9" target="_blank"
+                  class="w-full py-4 bg-primary text-white font-extrabold rounded-xl hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                  กรอกฟอร์มสมัคร
+                </a>
               </div>
-              <h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-3">ประกันออนไลน์</h3>
-              <p class="text-base text-muted-light dark:text-muted-dark mb-6">
-                ซื้อตอนนี้ พร้อมส่วนลด สมัครง่ายๆ ผ่านลิงค์ได้ด้วยตัวเอง <br>
-                <strong>พร้อมใส่รหัสผู้แนะนำ 168519</strong>
-              </p>
-              <a href="https://www.fwd.co.th/th/partner/fwd/online-products/" target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white font-bold text-sm shadow-md hover:bg-primary/90 hover:shadow-lg transition-all duration-300 group">
-                <span class="material-symbols-outlined text-base">open_in_new</span>
-                ซื้อประกันออนไลน์
-                <span
-                  class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-              </a>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- Gallery Section -->
-      <section id="gallery" class="py-16">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-bold text-text-light dark:text-text-dark mb-8 text-center">ข้อมูลเพิ่มเติม</h2>
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div
-              class="group cursor-pointer overflow-hidden rounded-xl border border-border-light bg-card-light shadow-md transition-all hover:shadow-lg dark:border-border-dark dark:bg-card-dark"
-              onclick="openLightbox('asset/tax_dc_plan.jpg')">
-              <p class="text-text-light dark:text-text-dark font-bold px-4 pt-4 pb-2">แผนประกันชีวิตและลดหย่อนภาษี</p>
-              <img src="asset/tax_dc_plan.jpg" alt="Tax DC Plan"
-                class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+      <!-- ===== GALLERY SECTION ===== -->
+      <section id="gallery" class="py-24 bg-white dark:bg-background-dark overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">Gallery</h2>
+            <h3 class="text-4xl font-extrabold text-text-light dark:text-text-dark">ข้อมูลเพิ่มเติม</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer bg-gray-50 dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" onclick="openLightbox('asset/tax_dc_plan.jpg')">
+              <div class="p-6">
+                <h4 class="font-bold text-lg mb-4 group-hover:text-primary transition-colors">แผนประกันชีวิตและลดหย่อนภาษี</h4>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+                  <img src="asset/tax_dc_plan.jpg" alt="Tax Plan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </div>
             </div>
-            <div
-              class="group cursor-pointer overflow-hidden rounded-xl border border-border-light bg-card-light shadow-md transition-all hover:shadow-lg dark:border-border-dark dark:bg-card-dark"
-              onclick="openLightbox('asset/fwd_info1.jpg')">
-              <p class="text-text-light dark:text-text-dark font-bold px-4 pt-4 pb-2">ข้อมูลแผนประกัน FWD</p>
-              <img src="asset/fwd_info1.jpg" alt="FWD Info"
-                class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="group cursor-pointer bg-gray-50 dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" onclick="openLightbox('asset/fwd_info1.jpg')">
+              <div class="p-6">
+                <h4 class="font-bold text-lg mb-4 group-hover:text-primary transition-colors">ข้อมูลแผนประกัน FWD</h4>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+                  <img src="asset/fwd_info1.jpg" alt="FWD Info" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </div>
             </div>
-            <div
-              class="group cursor-pointer overflow-hidden rounded-xl border border-border-light bg-card-light shadow-md transition-all hover:shadow-lg dark:border-border-dark dark:bg-card-dark"
-              onclick="openLightbox('asset/compare_plan.jpg')">
-              <p class="text-text-light dark:text-text-dark font-bold px-4 pt-4 pb-2">ตารางเปรียบเทียบแผนประกัน</p>
-              <img src="asset/compare_plan.jpg" alt="Compare Plan"
-                class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="group cursor-pointer bg-gray-50 dark:bg-card-dark rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover border border-border-light dark:border-border-dark transition-all duration-500" onclick="openLightbox('asset/compare_plan.jpg')">
+              <div class="p-6">
+                <h4 class="font-bold text-lg mb-4 group-hover:text-primary transition-colors">ตารางเปรียบเทียบแผนประกัน</h4>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+                  <img src="asset/compare_plan.jpg" alt="Compare Plans" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
     </main>
-    <!-- Footer -->
-    <footer class="border-t border-border-light bg-background-light dark:border-border-dark dark:bg-background-dark">
-      <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p class="text-sm text-muted-light dark:text-muted-dark">© 2025 ตัวแทนประกัน FWD สงวนลิขสิทธิ์ทุกประการ</p>
-          <div class="flex items-center gap-6">
-            <a class="text-sm text-muted-light hover:text-primary dark:text-muted-dark dark:hover:text-primary"
-              href="#home">หน้าหลัก</a>
-            <a class="text-sm text-muted-light hover:text-primary dark:text-muted-dark dark:hover:text-primary"
-              href="#about">เกี่ยวกับเรา</a>
-            <a class="text-sm text-muted-light hover:text-primary dark:text-muted-dark dark:hover:text-primary"
-              href="#plans">แผนประกัน</a>
-            <a class="text-sm text-muted-light hover:text-primary dark:text-muted-dark dark:hover:text-primary"
-              href="#contact">ติดต่อ</a>
-            <a class="text-sm text-muted-light hover:text-primary dark:text-muted-dark dark:hover:text-primary"
-              href="https://www.facebook.com/share/1Fgcp7TBDV/" target="_blank">Facebook</a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-gray-50 dark:bg-[#0D0D0D] border-t border-border-light dark:border-border-dark py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-12">
+          <div class="space-y-4 text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start gap-3">
+              <img src="asset/FWD_logo.jpg" alt="FWD Logo" class="h-8">
+              <span class="text-xl font-extrabold tracking-tight">อนัญดา สอาดพงษ์</span>
+            </div>
+            <p class="text-muted-light dark:text-muted-dark max-w-xs">
+              ตัวแทนประกันชีวิต FWD ที่พร้อมดูแลคุณและคนที่คุณรักด้วยความจริงใจ
+            </p>
           </div>
+
+          <nav class="flex flex-wrap justify-center gap-8">
+            <a href="#home" class="text-sm font-bold hover:text-primary transition-colors">หน้าหลัก</a>
+            <a href="#about" class="text-sm font-bold hover:text-primary transition-colors">เกี่ยวกับเรา</a>
+            <a href="#plans" class="text-sm font-bold hover:text-primary transition-colors">แผนประกัน</a>
+            <a href="#contact" class="text-sm font-bold hover:text-primary transition-colors">ติดต่อ</a>
+            <a href="https://anandainsure.agent-thailand.com/home/main/" target="_blank" class="text-sm font-bold text-primary hover:underline transition-colors">สนใจสมัครตัวแทน</a>
+          </nav>
+
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/share/1Fgcp7TBDV/" target="_blank" class="w-10 h-10 bg-white dark:bg-card-dark rounded-full shadow-sm flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+            <a href="https://line.me/R/ti/p/@479jzqhy" target="_blank" class="w-10 h-10 bg-white dark:bg-card-dark rounded-full shadow-sm flex items-center justify-center hover:bg-green-500 hover:text-white transition-all">
+              <img src="asset/line_logo.jpg" alt="LINE" class="w-5 h-5 rounded-full">
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-border-light dark:border-border-dark text-center">
+          <p class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-widest">
+            © 2026 ANANDA SAARDPONG. ALL RIGHTS RESERVED.
+          </p>
         </div>
       </div>
     </footer>
   </div>
 
-
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    // Function to change hero image on hover
-    function changeHeroImage(imageSrc) {
-      const heroElement = document.getElementById('hero-image');
-      heroElement.style.backgroundImage = `url('${imageSrc}')`;
-    }
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuBtn.querySelector('span');
+      icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.querySelector('span').textContent = 'menu';
+      });
+    });
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
         const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        e.preventDefault();
         const targetElement = document.querySelector(targetId);
-
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
-        });
-
-        // Update active nav link
-        document.querySelectorAll('.nav-link').forEach(link => {
-          link.classList.remove('active');
-        });
-        this.classList.add('active');
-      });
-    });
-
-    // Update active nav link based on scroll position
-    window.addEventListener('scroll', function () {
-      const sections = document.querySelectorAll('.section');
-      const navLinks = document.querySelectorAll('.nav-link');
-
-      let current = '';
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (pageYOffset >= (sectionTop - 100)) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
+        if (targetElement) {
+          window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
         }
       });
     });
 
-    // Enhanced animations for Hero section
-    document.addEventListener('DOMContentLoaded', function () {
-      // Initial load animations
-      const heroElements = document.querySelectorAll('#hero-text h1, #hero-text p, #hero-text button, #hero-image');
-      heroElements.forEach((el, index) => {
-        // Elements will animate due to CSS classes already applied
-      });
+    // Stacked Cards: hover to swap front/back
+    const heroStack = document.getElementById('hero-stack');
+    const cardFront = document.getElementById('hero-card-front');
+    const cardBack  = document.getElementById('hero-card-back');
 
-      // Enhanced hover effects
-      const heroImageContainer = document.getElementById('hero-image-container-inner');
-      const heroImageFront = document.getElementById('hero-image-front');
-      const heroImageBack = document.getElementById('hero-image-back');
+    if (heroStack) {
+      let swapped = false;
 
-      if (heroImageContainer && heroImageFront && heroImageBack) {
-        // Flip the images on mouseover
-        heroImageContainer.addEventListener('mouseover', () => {
-          heroImageFront.style.transform = 'rotateY(180deg)';
-          heroImageBack.style.transform = 'rotateY(0deg)';
-          heroImageBack.style.opacity = '1';
-          heroImageFront.style.opacity = '0';
-        });
-
-        // Move the 3D effect to mousemove while maintaining image positioning
-        heroImageContainer.addEventListener('mousemove', (e) => {
-          const rect = heroImageContainer.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-
-          // Calculate rotation based on mouse position
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-          const rotateX = (y - centerY) / 25; // Reduced for subtlety
-          const rotateY = (centerX - x) / 25; // Reduced for subtlety
-
-          // Apply both the flip effect and 3D tilt
-          heroImageContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-        });
-
-        // Reset to original position and transform on mouseout
-        heroImageContainer.addEventListener('mouseout', () => {
-          heroImageFront.style.transform = 'rotateY(0deg)';
-          heroImageBack.style.transform = 'rotateY(180deg)';
-          heroImageBack.style.opacity = '0';
-          heroImageFront.style.opacity = '1';
-          heroImageContainer.style.transform = 'scale(1)';
-        });
+      function applyState(isSwapped) {
+        if (!isSwapped) {
+          cardFront.style.top     = '0px';
+          cardFront.style.left    = '0px';
+          cardFront.style.opacity = '1';
+          cardFront.style.filter  = 'blur(0px)';
+          cardFront.style.zIndex  = '2';
+          cardBack.style.top      = '28px';
+          cardBack.style.left     = '28px';
+          cardBack.style.opacity  = '0.4';
+          cardBack.style.filter   = 'blur(1.5px)';
+          cardBack.style.zIndex   = '1';
+        } else {
+          cardBack.style.top      = '0px';
+          cardBack.style.left     = '0px';
+          cardBack.style.opacity  = '1';
+          cardBack.style.filter   = 'blur(0px)';
+          cardBack.style.zIndex   = '2';
+          cardFront.style.top     = '28px';
+          cardFront.style.left    = '28px';
+          cardFront.style.opacity = '0.4';
+          cardFront.style.filter  = 'blur(1.5px)';
+          cardFront.style.zIndex  = '1';
+        }
       }
 
-      // Scroll animations for sections
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px' // Trigger when 50px from bottom of viewport
-      };
+      heroStack.addEventListener('mouseenter', () => {
+        swapped = !swapped;
+        applyState(swapped);
+      });
+    }
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Add animation class when section comes into view
-            entry.target.classList.add('animate-scroll-in');
+    // Filter chips for plans
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const planCards = document.querySelectorAll('.plans-card');
 
-            // Remove observer after animation is triggered to prevent repeated animations
-            observer.unobserve(entry.target);
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', function () {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-white', 'shadow-lg');
+          c.classList.add('bg-white', 'dark:bg-card-dark', 'text-text-light', 'dark:text-text-dark', 'border', 'border-border-light', 'dark:border-border-dark');
+        });
+        this.classList.remove('bg-white', 'dark:bg-card-dark', 'text-text-light', 'dark:text-text-dark', 'border', 'border-border-light', 'dark:border-border-dark');
+        this.classList.add('bg-primary', 'text-white', 'shadow-lg');
+
+        const filter = this.getAttribute('data-filter');
+        planCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('hidden');
+            setTimeout(() => card.style.opacity = '1', 10);
+          } else {
+            card.style.opacity = '0';
+            setTimeout(() => card.classList.add('hidden'), 300);
           }
         });
-      }, observerOptions);
-
-      // Observe all sections that should have scroll animations
-      const sections = document.querySelectorAll('section:not(#home):not(#about)'); // Exclude hero and about sections
-      sections.forEach(section => {
-        // Set initial hidden state
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-
-        // Observe the section
-        observer.observe(section);
       });
     });
 
-    // Lightbox functionality
-    let currentImage = null;
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
 
     function openLightbox(imageSrc) {
-      currentImage = imageSrc;
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
       lightboxImg.src = imageSrc;
       lightbox.classList.remove('opacity-0', 'pointer-events-none');
       lightbox.classList.add('opacity-100');
@@ -676,71 +710,41 @@
     }
 
     function closeLightbox() {
-      const lightbox = document.getElementById('lightbox');
       lightbox.classList.remove('opacity-100');
       lightbox.classList.add('opacity-0', 'pointer-events-none');
       document.body.style.overflow = '';
-      currentImage = null;
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxOverlay = document.getElementById('lightbox-overlay');
-      const lightboxClose = document.getElementById('lightbox-close');
-
-      lightboxClose.addEventListener('click', closeLightbox);
-      lightboxOverlay.addEventListener('click', closeLightbox);
-
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && currentImage) {
-          closeLightbox();
-        }
-      });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
     });
 
-    // Filter functionality for insurance plans
-    document.addEventListener('DOMContentLoaded', function () {
-      const filterChips = document.querySelectorAll('.filter-chip');
-      const planCards = document.querySelectorAll('.plans-card');
-
-      filterChips.forEach(chip => {
-        chip.addEventListener('click', function () {
-          // Update active state on chips
-          filterChips.forEach(c => {
-            c.classList.remove('bg-primary');
-            c.classList.add('bg-primary/20', 'dark:bg-primary/30');
-            c.querySelector('p').classList.remove('text-white');
-            c.querySelector('p').classList.add('text-primary');
-          });
-          this.classList.remove('bg-primary/20', 'dark:bg-primary/30');
-          this.classList.add('bg-primary');
-          this.querySelector('p').classList.remove('text-primary');
-          this.querySelector('p').classList.add('text-white');
-
-          // Filter cards
-          const filter = this.getAttribute('data-filter');
-          planCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-              card.style.display = 'flex';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
+    // Scroll reveal
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          scrollObserver.unobserve(entry.target);
+        }
       });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('section').forEach(section => {
+      if (section.id !== 'home') {
+        section.classList.add('opacity-0');
+        scrollObserver.observe(section);
+      }
     });
   </script>
 
   <!-- Lightbox Modal -->
   <div id="lightbox"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300">
-    <div id="lightbox-overlay" class="absolute inset-0"></div>
-    <button id="lightbox-close" class="absolute right-4 top-4 z-10 text-white hover:text-gray-300 transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
+    class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 opacity-0 pointer-events-none transition-opacity duration-300"
+    onclick="closeLightbox()">
+    <button class="absolute right-8 top-8 text-white hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-4xl">close</span>
     </button>
-    <img id="lightbox-img" src="" alt="Fullscreen" class="relative z-10 max-h-[90vh] max-w-[90vw] object-contain">
+    <img id="lightbox-img" src="" alt="Fullscreen View" class="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-2xl">
   </div>
 </body>
 
